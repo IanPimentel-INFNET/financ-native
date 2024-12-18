@@ -10,13 +10,13 @@ export const Button = forwardRef<View, ButtonProps>(({ title, ...touchableProps 
     <TouchableOpacity
       ref={ref}
       {...touchableProps}
-      className={`${styles.button} ${touchableProps.className}`}>
-      <Text className={styles.buttonText}>{title}</Text>
+      className={`${buttonClasses.button} ${touchableProps.className}`}>
+      <Text className={buttonClasses.buttonText}>{title}</Text>
     </TouchableOpacity>
   );
 });
 
-const styles = {
-  button: 'items-center bg-indigo-500 rounded-[28px] shadow-md p-4',
+const buttonClasses = {
+  button: 'items-center bg-indigo-500 rounded-md shadow-md p-2',
   buttonText: 'text-white text-lg font-semibold text-center',
 };
